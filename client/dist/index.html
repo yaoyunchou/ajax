@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="zh-CN" xml:lang="zh-CN">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/form.nsw.min.js"></script></head>
+
+	<body>
+		<button id = "add" >替换</button>
+		<div class="blk" data-jiaye-section="留言">
+			<div class="message">
+				<div class="content">
+					<form  id="nswForm" class="message_con" url="http://wxbtest.nsw99.com/jiayewxb/api/leavemessage/add">
+						<div class="message_title">
+							在线留言
+						</div>
+						<div class="message_from">
+							<ul>
+								<input type="hidden" name="userId" id="userId" value="291" data-node-id="ncaaaa4a1ba9a49d99f7ff7f2d233e97c">
+								<input type="hidden" name="pageId" id="pageId" value="6caa9f2201b7435fa0542f6be7654b39" data-node-id="n242dfc0a0a1c4c97aaff6c21113f060d">
+								<li><label><img src="images/mess_icon1.png"/></label><input type="text" placeholder="姓名" name="name" id="" value=""   /><span>*</span> </li>
+								<li><label><img src="images/mess_icon2.png"/></label><input type="text" placeholder="公司名称" name="companyname" id="" value=""  /><span>*</span></li>
+								<li><label><img src="images/mess_icon3.png"/></label><input type="text" placeholder="职位" name="position" id="" value="" /><span>*</span></li>
+								<li><label><img src="images/mess_icon4.png"/></label><input type="text" placeholder="邮箱" name="email" id="" value="" /><span>*</span></li>
+								<li><label><img src="images/mess_icon5.png"/></label><input type="text" placeholder="微信" name="weixin" id="" value="" /><span>*</span></li>
+								<li><label><img src="images/mess_icon6.png"/></label><input type="text" placeholder="手机号码" name="telephone" id="" value="" /><span>*</span></li>
+								<li><label><img src="images/mess_icon8.png"/></label><input type="text" placeholder="行业" name="industry" id="" value="" /><span>*</span></li>
+								<li class="mess_dis"><label><img src="images/mess_icon9.png"/></label>
+									<div id="area" required>
+										<div class="form-group">
+											<select class="form-control" id="province10"></select>
+										</div>
+										<div class="form-group">
+											<select class="form-control" id="city10"></select>
+										</div>
+										<div class="form-group">
+											<select class="form-control" id="district10"></select>
+										</div>
+									</div><span>*</span></li>
+								<li class="mess_add"><label><img src="images/mess_icon7.png"/></label><input type="text" placeholder="地址" name="address" id="" value="" /><span>*</span></li>
+								<li class="mess_text"><label><img src="images/mess_icon10.png"/></label><textarea name="content" placeholder="留言内容" ></textarea><span>*</span></li>
+							</ul>
+							<div class="clear">
+
+							</div>
+							<div class="message_button">
+								<input type="button" class="submit" value="提交" />
+								<input type="button" class ="reset" value="重置" />
+							</div>
+						</div>
+					</form>
+					<div class="mess_success">
+							<div class="mess_success_con">
+								<div class="mess_su_img">
+									<img src="images/success.png" />
+								</div>
+								<div class="mess_su_txt">
+									提交成功！
+								</div>
+								<div class="clear">
+
+								</div>
+								<div class="mess_su_sub">
+									确定<span>(2s)</span>
+								</div>
+							</div>
+						</div>
+					<style>
+						.message {
+							background: url(images/mess_bj1.jpg) no-repeat center top;
+							background-size: 1920px 660px;
+						}
+
+						.message .content {
+							width: 1200px;
+							margin: 0 auto;
+						}
+
+						.message .message_con {
+							padding: 50px;
+							background: url(images/mess_bj2.jpg) no-repeat center top;
+							background-size: 1200px 660px;
+						}
+
+						.message_title {
+							height: 48px;
+							font-size: 28px;
+							color: #000;
+							font-weight: bold;
+							text-align: center;
+							line-height: 48px;
+							margin-bottom: 20px;
+						}
+
+						.message ul {
+							font-size: 0;
+						}
+
+						.message input,
+						.message textarea {
+							outline: none;
+							background: none;
+							border: 0;
+							resize: none;
+						}
+
+						.message li {
+							width: 500px;
+							height: 40px;
+							font-size: 24px;
+							display: inline-block;
+							border: 1px solid #eee;
+							margin-right: 48px;
+							margin-bottom: 25px;
+							position: relative;
+						}
+						.message li em{ position: absolute; left: 50px; top: 40px; font-size: 12px; line-height: 25px; color: #E03636;}
+
+						.message li label img {
+							width: 30px;
+							height: 30px;
+						}
+
+						.message li label {
+							width: 40px;
+							height: 35px;
+							padding-top: 5px;
+							padding-left: 10px;
+							display: block;
+							float: left;
+						}
+
+						.message li input {
+							height: 40px;
+							width: 420px;
+							font-size: 20px;
+							line-height: 40px;
+							color: #666;
+							display: block;
+							float: left;
+						}
+
+						.message li span {
+							float: right;
+							height: 40px;
+							line-height: 40px;
+							color: #E03636;
+							display: inline-block;
+							padding-right: 10px;
+						}
+
+						.message .mess_add,
+						.message .mess_text {
+							width: 1050px;
+						}
+						.message .mess_add input,
+						.message .mess_text textarea{
+
+							width: 970px;
+						}
+
+						.message .mess_text {
+							height: 120px;
+						}
+
+						.message .mess_text label {
+							vertical-align: top;
+						}
+
+						.message textarea {
+							font-size: 20px;
+							line-height: 40px;
+							color: #666;
+							height: 120px;
+							overflow: auto;
+						}
+
+						.message_button {
+							height: 40px;
+							font-size: 24px;
+							color: #fff;
+							line-height: 40px;
+							text-align: center;
+						}
+
+						.message_button input {
+							width: 200px;
+							border-radius: 5px;
+							background: #2a78e8;
+							color: #fff;
+							line-height: 40px;
+							cursor: pointer;
+							margin:0 20px;
+						}
+
+						.message .mess_dis {
+							width: 500px;
+							color: #555;
+							line-height: 40px;
+						}
+
+						#distpicker5 {
+							float: left;
+							width: 420px;
+						}
+
+						#distpicker5>div {
+							width: 138px;
+							height: 40px;
+							font-size: 16px;
+							float: left;
+						}
+
+						#distpicker5 select {
+							width: 138px;
+							height: 40px;
+							border: 0;
+						}
+						.mess_success {
+							display: none;
+							position: fixed;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background: rgba(0, 0, 0, 0.6);
+						}
+
+						.mess_success_con {
+							width: 500px;
+							height: 240px;
+							text-align: center;
+							padding-top: 35px;
+							background: #fff;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							margin: -150px 0 0 -300px;
+							border-radius: 5px;
+						}
+
+						.mess_su_img {
+							width: 82px;
+							margin-left: 50px;
+							margin: 0 auto;
+						}
+
+						.mess_su_img img {
+							width: 100%;
+						}
+
+						.mess_su_txt {
+							height: 80px;
+							font-size: 32px;
+							line-height: 80px;
+							display: inline-block;
+							vertical-align: top;
+						}
+
+						.mess_su_sub {
+							margin: 0 auto;
+							width: 200px;
+							height: 40px;
+							border-radius: 5px;
+							background: #2a78e8;
+							font-size: 24px;
+							line-height: 40px;
+							text-align: center;
+							color: #fff;
+							line-height: 40px;
+							cursor: pointer;
+						}
+
+						.mess_su_sub span {
+							font-size: 12px;
+						}
+						.htmlbody{
+							height: 100%;
+							overflow: auto;
+						}
+					</style>
+					<script src="http://ozk6w20id.bkt.clouddn.com/js/distpicker.data.min.js"></script>
+					<script src="http://ozk6w20id.bkt.clouddn.com/js/distpicker.min.js"></script>
+
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
