@@ -1,7 +1,17 @@
 {
-  "devDependencies": {
-    "koa": "^2.5.0",
-    "koa-body": "^2.5.0",
+  "name": "server",
+  "version": "1.0.0",
+  "description": "测试研究关于ajax的跨域问题,jsonp,cors",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yaoyc",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-body": "^2.6.0",
     "koa-log4": "^2.3.0",
     "koa-router": "^7.4.0"
   }

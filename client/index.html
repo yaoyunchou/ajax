@@ -28,11 +28,11 @@
 		//测试模块
 		describe("ajax跨越", function() {
 			// 测试方法
-			it("get1请求", function(done) {
+			it("get请求", function(done) {
 				// 服务器返回的结果
 				var result;
 
-				$.getJSON(base + "/getjson").then(function(jsonObj) {
+				$.get(base + "/getjson").then(function(jsonObj) {
 					result = jsonObj;
 				});
 
@@ -45,57 +45,57 @@
 				}, 100);
 			});
 			
-			// 测试方法
-			// it("jsonp请求", function(done) {
-			// 	// 服务器返回的结果
-			// 	var result;
+			//测试方法
+			it("jsonp请求", function(done) {
+				// 服务器返回的结果
+				var result;
 
-			// 	$.ajax({
-			// 		url: base +"/get1",
-			// 		dataType: "jsonp",
-			// 		jsonp: "callback2",
-			// 		cache:true,
-			// 		success: function(json){
-			// 			result = json;
-			// 		}
-			// 	});
+				$.ajax({
+					url: base +"/get1",
+					dataType: "jsonp",
+					jsonp: "callback",
+					cache:true,
+					success: function(json){
+						result = json;
+					}
+				});
 
-			// 	// 由于是异步请求，需要使用setTimeout来校验
-			// 	setTimeout(function() {
-			// 		expect(result).toEqual({
-			// 			"data" : "get1 ok"
-			// 		});
+				// 由于是异步请求，需要使用setTimeout来校验
+				setTimeout(function() {
+					expect(result).toEqual({
+						"data" : "get1 ok"
+					});
 
-			// 		// 校验完成，通知jasmine框架
-			// 		done();
-			// 	}, 100);
-			// });
+					// 校验完成，通知jasmine框架
+					done();
+				}, 100);
+			});
 
 			
-			// it("postJson请求", function(done) {
-			// 	// 服务器返回的结果
-			// 	var result;
+			it("postJson请求", function(done) {
+				// 服务器返回的结果
+				var result;
 
-			// 	$.ajax({
-			// 		type : "post",
-			// 		url: base + "/postJson",
-			// 		contentType : "application/json;charset=utf-8",
-			// 		data: JSON.stringify({name: "xiaofengqing"}),
-			// 		success: function(json){
-			// 			result = json;
-			// 		}
-			// 	});
+				$.ajax({
+					type : "post",
+					url: base + "/postJson",
+					contentType : "application/json;charset=utf-8",
+					data: JSON.stringify({name: "xiaofengqing"}),
+					success: function(json){
+						result = json;
+					}
+				});
 
-			// 	// 由于是异步请求，需要使用setTimeout来校验
-			// 	setTimeout(function() {
-			// 		expect(result).toEqual({
-			// 			"data" : "postJson xiaofengqing"
-			// 		});
+				// 由于是异步请求，需要使用setTimeout来校验
+				setTimeout(function() {
+					expect(result).toEqual({
+						"data" : "postJson xiaofengqing"
+					});
 
-			// 		// 校验完成，通知jasmine框架
-			// 		done();
-			// 	}, 100);
-			// });
+					// 校验完成，通知jasmine框架
+					done();
+				}, 100);
+			});
 			
 			
 			// it("getCookie请求", function(done) {
