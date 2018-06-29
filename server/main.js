@@ -10,12 +10,12 @@ app.use(koaBody({
     multipart: true
 }));
 
-app.use( (ctx, next) => {
-    ctx.set('Access-Control-Allow-Origin', '*');
-    ctx.set('Access-Control-Allow-Headers', '*');
-    ctx.set('Access-Control-Allow-Methods', '*');
-    next();
-});
+// app.use( (ctx, next) => {
+//     ctx.set('Access-Control-Allow-Origin', '*');
+//     ctx.set('Access-Control-Allow-Headers', '*');
+//     ctx.set('Access-Control-Allow-Methods', '*');
+//     next();
+// });
 //TODO 引入http的监控  是否后面可以自己弄一个类似的,信息可以再完整一点
 app.use(koalog4js.koaLogger(koalog4js.getLogger('http'), {
     level: 'auto'
